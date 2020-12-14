@@ -35,6 +35,7 @@
             <!--div that displays temperature buttons-->
             <div class="temperature">
                 <h5>Fahrenheit or Celsius</h5>
+                <!--buttons for fahrenheit and celsius-->
                 <button class="btn btn-danger" id="fahrenheit">Fahrenheit</button>
                 <button class="btn btn-primary" id="celsius">Celsius</button>
             </div>
@@ -49,9 +50,13 @@
                 <img class="card-img-top icon" alt="Current Weather">
                 <!--ul that displays current weather and temperature-->
                 <ul class="list-group list-group-flush">
+                    <!--first li adds extra line for professional purpose-->
                     <li class="list-group-item"></li>
+                    <!--li that displays description of current weather-->
                     <li class="list-group-item desc" id="description"></li>
+                    <!--li that displays temperature in fahrenheit if fahrenheit button is clicked-->
                     <li class="list-group-item tempF" id="fahrenheitDisplay"></li>
+                    <!--li that displays temperature in celsius if celsius button is clicked-->
                     <li class="list-group-item tempC" id="celsiusDisplay"></li>
                 </ul>
             </div>

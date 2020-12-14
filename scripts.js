@@ -27,15 +27,17 @@ searchButton.addEventListener('click', function()
             var tempCValue = (data.main.temp - 273.15).toFixed(0);
             var descValue = data.weather[0].main;
             var iconSrc = 'http://openweathermap.org/img/wn/' + data.weather[0].icon + ".png";
-            //
+            //the sentence that includes city depending on what zip code the user input
             document.querySelector('.name').innerHTML = "Current Condition in " + nameValue;
             //if user clicked fahrenheit button
             document.querySelector('.tempF').innerHTML = "Temperature in Fahrenheit: " + tempFValue + "°F";
             //if user clicked celsius button
             document.querySelector('.tempC').innerHTML = "Temperature in Celsius: " + tempCValue + "°C";
+            //where the current weather will be displayed
             document.querySelector('.desc').innerHTML = "Current Weather: " + descValue;
+            //where picture of current weather will be displayed
             document.querySelector('.icon').src = iconSrc;
-
+            //display conditions for the querySelectors after zip code is valid
             document.querySelector('.temperature').style.display = "inline-block";
             document.querySelector('.conditionDisplay').style.display = "none";
             document.querySelector('.startOverButton').style.display = "none";
@@ -50,13 +52,16 @@ function LoadedPage()
     //css in javascript
     document.body.style.backgroundImage = "url('BlueSky.jpg')";
     document.body.style.backgroundSize = "cover";
+
     //setting displays for querySelectors to none when page loads
     document.querySelector('.temperature').style.display = "none";
     document.querySelector('.conditionDisplay').style.display = "none";
     document.querySelector('.startOverButton').style.display = "none";
-    //addEventListeners
+
+    //addEventListeners for the buttons
     document.getElementById('fahrenheit').addEventListener('click', FahrenheitDisplay);
     document.getElementById('celsius').addEventListener('click', CelsiusDisplay);
+
     //button to come back to zip code menu
     document.getElementById('startOver').addEventListener('click', StartOver);
 }
@@ -88,9 +93,10 @@ function CelsiusDisplay()
     document.getElementById('celsiusDisplay').style.display = "inline-block";
     document.getElementById('fahrenheitDisplay').style.display = "none";
 }
-
+//function if player presses Select a Different Location Button
 function StartOver()
 {
+    //display conditions to the querySelectors and getElementByIds
     document.getElementById('selectionGroup').style.display = "inline-block";
     document.querySelector('.input').style.display = "inline-block";
     document.querySelector('.inputZipCode').value = "";
