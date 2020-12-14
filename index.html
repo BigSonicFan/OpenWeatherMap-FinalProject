@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
+        <!--Sammy Stark-->
+        <!--December 1st, 2020-->
+        <!--Final Project-->
+        <!--index.html-->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Current Location Weather & Temperature</title>
@@ -11,30 +15,39 @@
         <div style="background-color:rgb(115, 180, 255);">
             <h1><i style="color:white;" class="fa fa-cloud" aria-hidden="true"></i> Current Location Weather & Temperature <i style="color:white;" class="fa fa-cloud" aria-hidden="true"></i></h1>
             <h6>Input a US Zip Code, and choose either Fahrenheit or Celsius to see the current conditions from the selected location, and the temperature in the version of your choosing.</h6>
+            <!--hr creates line-->
             <hr />
         </div> 
         <div id="selectionGroup">
             <br>
+            <!--div that displays the input codes-->
             <div class="input">
                 <h5>Please Type In The Zip Code</h5>
                 <div>
+                    <!--input where user will type zip code-->
                     <input type="text" value="" class="inputZipCode">
+                    <!--input where user clicks after zip code is typed in-->
                     <input type="submit" value="Search" class="button btn btn-success">
                 </div>
             </div>
             <br>
             <br>
+            <!--div that displays temperature buttons-->
             <div class="temperature">
                 <h5>Fahrenheit or Celsius</h5>
                 <button class="btn btn-danger" id="fahrenheit">Fahrenheit</button>
                 <button class="btn btn-primary" id="celsius">Celsius</button>
             </div>
         </div>
+        <!--div that displays conditions of selected location and temperature in version of user's choosing-->
         <div class="conditionDisplay">
+            <!--where sentence include city is display-->
             <h5 class="name" style="display:inline-block;"></h5>
             <br>
             <div class="card" style="width: 18rem;">
+                <!--where icon will be displayed-->
                 <img class="card-img-top icon" alt="Current Weather">
+                <!--ul that displays current weather and temperature-->
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"></li>
                     <li class="list-group-item desc" id="description"></li>
@@ -45,6 +58,7 @@
         </div>
         <br>
         <br>
+        <!--button that brings user back to beginning without having to reload page-->
         <div class="startOverButton">
             <button type="button" class="btn btn-info" id="startOver">Select a Different Location</button>
         </div>

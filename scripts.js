@@ -1,3 +1,8 @@
+//Sammy Stark
+//December 1st, 2020
+//Final Project
+//scripts.js
+
 //window that loads page
 window.addEventListener('load', LoadedPage);
 
