@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Current Location Weather & Temperature</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    </head>
+    <body style="text-align:center;">
+        <div style="background-color:rgb(115, 180, 255);">
+            <h1><i style="color:white;" class="fa fa-cloud" aria-hidden="true"></i> Current Location Weather & Temperature <i style="color:white;" class="fa fa-cloud" aria-hidden="true"></i></h1>
+            <h6>Input a US Zip Code, and choose either Fahrenheit or Celsius to see the current conditions from the selected location, and the temperature in the version of your choosing.</h6>
+            <hr />
+        </div> 
+        <div id="selectionGroup">
+            <br>
+            <div class="input">
+                <h5>Please Type In The Zip Code</h5>
+                <div>
+                    <input type="text" value="" class="inputZipCode">
+                    <input type="submit" value="Search" class="button btn btn-success">
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="temperature">
+                <h5>Fahrenheit or Celsius</h5>
+                <button class="btn btn-danger" id="fahrenheit">Fahrenheit</button>
+                <button class="btn btn-primary" id="celsius">Celsius</button>
+            </div>
+        </div>
+        <div class="conditionDisplay">
+            <h5 class="name" style="display:inline-block;"></h5>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top icon" alt="Current Weather">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item desc" id="description"></li>
+                    <li class="list-group-item tempF" id="fahrenheitDisplay"></li>
+                    <li class="list-group-item tempC" id="celsiusDisplay"></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="startOverButton">
+            <button type="button" class="btn btn-info" id="startOver">Select a Different Location</button>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
